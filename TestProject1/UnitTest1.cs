@@ -15,6 +15,18 @@ namespace SnackMachineTest
             //Asserd
             Assert.Equal(expected, money);
         }
+        [Fact]
+        public void OperatorEqual_False_ReturnCorrectValue()
+        {
+            //Arrage
+            Money money1 = new Money(1, 0, 0, 5, 0, 0);
+            Money money2 = new Money(1, 0, 0, 4, 0, 0);
+            bool money = money1 == money2;
+            var expected = false;
+            //Asserd
+            Assert.Equal(expected, money);
+        }
     }
 }
+
 
